@@ -12,3 +12,6 @@ npm install && bower install
 node server.js
 
 ```
+
+Screenshot:
+![search itunes music](https://raw.githubusercontent.com/EricLondon/itunes-nodejs-elasticsearch-front-end/master/screenshot.png "Search iTunes Music")
