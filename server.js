@@ -25,31 +25,6 @@ app.get('/', function(req, res) {
   res.sendFile(__dirname + '/index.html');
 });
 
-app.get('/facets/:facet_name', function(req, res){
-  var facet_name = req.params.facet_name;
-  var aggs_name = 'aggs_' + facet_name
-  var _body = {
-    size: 0,
-    aggs: {}
-  }
-  _body.aggs[aggs_name] = {
-    terms: {
-      field: facet_name + '.raw',
-      size: 0
-    }
-  }
-
-  es_client.search({
-    index: elasticsearch_index,
-    body: _body
-  }).then(function(resp) {
-    res.json(resp.aggregations[aggs_name].buckets);
-  }, function(err) {
-    console.trace(err.message);
-  });
-
-})
-
 app.get('/search', function(req, res) {
 
   // remove empty values from query string

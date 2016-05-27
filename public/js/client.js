@@ -58,17 +58,6 @@
 
     }
 
-    // this.load_facets = function() {
-    //   var _this = this;
-    //   $(this.facets).each(function(){
-    //     var facet_name = this;
-    //     $.getJSON('/facets/' + facet_name, function(data){
-    //       _this.facets_data[facet_name] = data;
-    //       _this.display_facet(facet_name);
-    //     });
-    //   });
-    // }
-
     this.display_facet = function(facet_name) {
       var select = $('#facet-' + facet_name);
 
@@ -94,7 +83,6 @@
         return false;
       });
 
-      // this.load_facets();
       $('form#search').submit();
 
     };
