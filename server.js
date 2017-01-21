@@ -19,7 +19,7 @@ app.use('/bower_components', express.static(__dirname + '/bower_components'));
 var _ = require('lodash');
 
 var facets = ['Genre', 'Artist', 'Album'];
-var elasticsearch_index = 'itunes_tracks';
+var elasticsearch_index = 'itunes';
 
 app.get('/', function(req, res) {
   res.sendFile(__dirname + '/index.html');

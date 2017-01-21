@@ -29,7 +29,7 @@
       $(results.hits.hits).each(function(i) {
         var result = this;
 
-        if (result._type == 'itunes_track') {
+        if (result._type == 'track') {
           var tr = $('<tr>').data('track_id', result._id);
 
           var field_list = ['Artist', 'Name', 'Album', 'Album Artist', 'Track Number', 'Year', 'Genre', 'Rating'];
